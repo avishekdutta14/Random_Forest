@@ -10,7 +10,7 @@ df2 =  read.csv ("unique_percentage.csv", header = TRUE)
 colnames(df2)[1] <- "SampleID"
 
 #Reading the metadata file
-metadata =  read.csv("sample_data_with_sulfide_09012020.csv", header=TRUE)
+metadata =  read.csv("sample_metadata.csv", header=TRUE)
 
 sulfide = metadata %>%  select(SampleID, Sulfide)
 
