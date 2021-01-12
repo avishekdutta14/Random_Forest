@@ -80,7 +80,7 @@ write.csv(total1,"predicted_vs_actual_in_training.csv", row.names = FALSE)
 pdf(paste0("Training_plot",x,y,z,".pdf"),8,4)
 ggplot(total1, aes(y=Actual_value, x=Predicted_value)) +  geom_point() + geom_smooth(method=lm)+
   ggtitle(paste0("Model RM",x,y,z," training plot")) +
-  xlab("Predicted sulfide concentration [mM]") + ylab("Actual sulfide concentration [mM]") 
+  xlab("Predicted sulfide concentration") + ylab("Actual sulfide concentration") 
 dev.off()
 
 #running linear model for training
@@ -105,7 +105,7 @@ write.csv(total2,"predicted_vs_actual_in_validation.csv", row.names = FALSE)
 pdf(paste0("Validation_plot",x,y,z,".pdf"),8,4)
 ggplot(total2, aes(y=Actual_value, x=Predicted_value)) +  geom_point() + geom_smooth(method=lm)+  
   ggtitle(paste0("Model RM",x,y,z," validation plot")) +
-  xlab("Predicted sulfide concentration [mM]") + ylab("Actual sulfide concentration [mM]") 
+  xlab("Predicted sulfide concentration ") + ylab("Actual sulfide concentration ") 
 dev.off()
 
 #running linear model for validation
