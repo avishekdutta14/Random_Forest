@@ -4,7 +4,7 @@ library(dplyr)
 
 df =  read.csv("BP_training_20.bacteria.unique_tally.csv", header=TRUE,row.names = 1)
 df[is.na(df)] = 0
-df_percent<- df / rowSums(df) * 100
+df_percent = df / rowSums(df) * 100
 write.csv(df_percent, "unique_percentage.csv")
 df2 =  read.csv ("unique_percentage.csv", header = TRUE)
 colnames(df2)[1] <- "SampleID"
