@@ -1,6 +1,7 @@
 library(dplyr)
 
-#reading the unique tally file (output of paprica)
+#reading the unique tally file (output of paprica). But you can also use edge_tally and path_tally here.
+#the first part of the script reads the file and converts them into relative percentage abundance.
 
 df =  read.csv("BP_training_20.bacteria.unique_tally.csv", header=TRUE,row.names = 1)
 df[is.na(df)] = 0
