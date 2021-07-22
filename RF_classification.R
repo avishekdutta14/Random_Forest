@@ -60,9 +60,9 @@ p1 <- predict(rf, train)
 # writing the prediction to check which observation are predicted incorrectly in the training dataset
 write.csv(p1,"training_phase.csv")
 
-data <- read.csv("RF_input_674_phase.csv", header=TRUE)
+data1 <- read.csv("RF_input_674_phase.csv", header=TRUE)
 
-df2 <- data %>%  select(1, phase)
+df2 <- data1 %>%  select(1, phase)
 colnames(df2) <- c("SampleID", "Actual_phase")
 
 #for training accuracy
